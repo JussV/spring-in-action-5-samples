@@ -16,11 +16,19 @@ spring:
     password: letm31n
     embedded:
       enabled: false
-    
+
+---
+spring:
+  profiles: rabbitmq-template
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+
 ---
 spring:
   profiles: kafka-listener
-    
+
   kafka:
     bootstrap-servers:
     - localhost:9092

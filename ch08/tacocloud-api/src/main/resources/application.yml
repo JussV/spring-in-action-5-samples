@@ -11,7 +11,7 @@ spring:
     password: letm31n
     embedded:
       enabled: false
-      
+
   kafka:
     bootstrap-servers:
     - localhost:9092
@@ -22,7 +22,12 @@ spring:
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
     producer:
       key-serializer: org.springframework.kafka.support.serializer.JsonSerializer
-      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer    
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+
 ---
 # None of these properties will actually work as configured for this profile.
 # But it is left here as an example of configuring for a production profile
